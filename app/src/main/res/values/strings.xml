@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Miguel</string>
+
+    <string name="main_saludo">Hola mundo</string>
+    <string name="btn_boton1">Presioname</string>
+    <string name="main_presionaste_boton1">Presionaste el boton 1</string>
+    <string name="btn_boton2">Boton de imagen</string>
+    <string name="main_presionaste_otro_boton">Presionaste el boton de imagen</string>
+
+</resources>
