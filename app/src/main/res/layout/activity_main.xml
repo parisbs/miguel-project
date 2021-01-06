@@ -4,35 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".principal.MainActivity">
 
-    <TextView
-        android:id="@+id/texto1"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_saludo"
+        android:inputType="textPersonName"
+        android:hint="@string/main_nombre_hint"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/boton1" />
 
-    <ImageButton
-        android:id="@+id/botonimagen2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/alert_dark_frame"
-        android:contentDescription="@string/btn_boton2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/boton1"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <Button
-        android:id="@+id/boton1"
+            android:id="@+id/boton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_boton1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/botonimagen2"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
