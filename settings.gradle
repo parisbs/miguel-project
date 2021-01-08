@@ -1,2 +1,4 @@
+include ':casosdeuso'
+include ':dominio'
 include ':app'
 rootProject.name = "Miguel"

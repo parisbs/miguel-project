@@ -19,7 +19,7 @@ class SecondActivity : AppCompatActivity() {
         saludoPersonalizado = findViewById<TextView>(R.id.saludoPersonalizado)
 
                 intent?.extras?.get("nombre")?.also { nombre ->
-            saludoPersonalizado.text = getString(
+            saludoPersonalizado?.text = getString(
                 R.string.second_saludo_personalizado,
                 nombre.toString()
             )
