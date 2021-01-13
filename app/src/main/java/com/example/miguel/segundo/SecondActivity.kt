@@ -3,12 +3,17 @@ package com.example.miguel.segundo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import com.example.miguel.R
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class SecondActivity : AppCompatActivity() {
 
+    private val secondViewModel: yu by viewModel()
+
     private lateinit var saludoPersonalizado: TextView
+    private lateinit var tirarDadoSeisCaras: Button
 
     // Ciclo de vida: se ejecuta primero
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +22,7 @@ class SecondActivity : AppCompatActivity() {
         Log.i("Segunda", "onCreate")
 
         saludoPersonalizado = findViewById<TextView>(R.id.saludoPersonalizado)
+        tirarDadoSeisCaras = findViewById<Button>(R.id.tirarDadoSeisCaras)
 
                 intent?.extras?.get("nombre")?.also { nombre ->
             saludoPersonalizado?.text = getString(

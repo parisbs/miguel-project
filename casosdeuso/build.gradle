@@ -39,6 +39,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
 
+    // importamos la dependencia de nuestro modulo local
     implementation project(":dominio")
 
     testImplementation 'junit:junit:4.+'
