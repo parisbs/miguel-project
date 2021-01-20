@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.example.miguel.R
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class SecondActivity : AppCompatActivity() {
 
-    private val secondViewModel: yu by viewModel()
+    private val secondViewModel: SecondViewModel by viewModel()
 
     private lateinit var saludoPersonalizado: TextView
     private lateinit var tirarDadoSeisCaras: Button
@@ -20,6 +22,8 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
         Log.i("Segunda", "onCreate")
+
+        subscribeTirada()
 
         saludoPersonalizado = findViewById<TextView>(R.id.saludoPersonalizado)
         tirarDadoSeisCaras = findViewById<Button>(R.id.tirarDadoSeisCaras)
@@ -62,4 +66,19 @@ class SecondActivity : AppCompatActivity() {
         super.onDestroy()
         Log.i("Segunda", "onDestroy")
     }
+
+    private fun subscribeTirada() = secondViewModel.tirada.observe(this, Observer {
+        when (val resultado = it) {
+            is SecondViewModel.ResultadoDados.Correcto -> {
+                saludoPersonalizado.text = resultado.valorDeDado.toString()
+            }
+            is SecondViewModel.ResultadoDados.Error -> {
+                Toast.makeText(
+                    this,
+                    "Se perdio el dado",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+    })
 }
