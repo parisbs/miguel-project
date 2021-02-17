@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="juego_dados">Dados</string>
+    <string name="juego_dados_descripcion">Tira dados de varias caras</string>
+    <string name="juego_moneda">Moneda</string>
+    <string name="juego_moneda_descripcion">Tira una moneda</string>
+
+</resources>

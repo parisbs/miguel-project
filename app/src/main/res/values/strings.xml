@@ -6,5 +6,6 @@
     <string name="second_saludo_personalizado">Hola %1$s</string>
     <string name="btn_boton1">Saludame</string>
     <string name="second_btn_tirar_dado_seis_caras">Tirar un dado de 6 caras</string>
+    <string name="second_btn_tirar_dado_12_caras">Tirar un dado de 12 caras</string>
 
 </resources>

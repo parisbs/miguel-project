@@ -1,7 +1,7 @@
 package com.example.miguel.dominio.juegos
 
-import com.example.miguel.dominio.entities.Dado6Caras
+import com.example.miguel.dominio.entities.Dado
 
 interface Dados {
-    fun tiradaDado6Caras(): Dado6Caras
+    fun tirarUnDado(caras: Int = 6): Int
 }

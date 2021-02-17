@@ -21,6 +21,15 @@
         android:text="@string/second_btn_tirar_dado_seis_caras"
         app:layout_constraintTop_toBottomOf="@id/saludoPersonalizado"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tirarDado12Caras" />
+
+    <Button
+        android:id="@+id/tirarDado12Caras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/second_btn_tirar_dado_12_caras"
+        app:layout_constraintTop_toBottomOf="@id/saludoPersonalizado"
+        app:layout_constraintStart_toEndOf="@id/tirarDadoSeisCaras"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

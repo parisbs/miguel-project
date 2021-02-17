@@ -1,8 +1,7 @@
 package com.example.miguel.dominio.juegos
 
-import com.example.miguel.dominio.entities.Dado6Caras
-import com.example.miguel.dominio.juegos.Dados
+import com.example.miguel.dominio.entities.Dado
 
 class JuegoDados : Dados {
-    override fun tiradaDado6Caras(): Dado6Caras = Dado6Caras()
+    override fun tirarUnDado(caras: Int): Int = Dado(caras).tirarDado()
 }
