@@ -47,6 +47,9 @@ dependencies {
     implementation "org.koin:koin-android:2.0.1"
     implementation "org.koin:koin-android-viewmodel:2.0.1"
 
+    // Dependencia para adapters
+    implementation "com.github.parisbs:uitools:1.0.0-beta01"
+
     // importar la dependencia de casos de uso
     implementation project(":casosdeuso")
     implementation project(":dominio")

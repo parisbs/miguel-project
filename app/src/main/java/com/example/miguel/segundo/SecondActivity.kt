@@ -32,7 +32,7 @@ class SecondActivity : AppCompatActivity() {
         tirarDado12Caras = findViewById<Button>(R.id.tirarDado12Caras)
 
                 intent?.extras?.get("nombre")?.also { nombre ->
-            saludoPersonalizado?.text = getString(
+            saludoPersonalizado.text = getString(
                 R.string.second_saludo_personalizado,
                 nombre.toString()
             )

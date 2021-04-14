@@ -27,6 +27,7 @@ class Miguel : Application() {
                     mainModule,
                         dominioModule,
                     casosDeUsoModule,
+                    com.example.miguel.principal.mainModule,
                     secondModule
                 )
             )

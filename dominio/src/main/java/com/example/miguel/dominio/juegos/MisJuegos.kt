@@ -7,6 +7,7 @@ import com.example.miguel.dominio.entities.Juego
 class MisJuegos(
         private val context: Context
 ) : ListaDeJuegos {
+
     override fun quePuedoJugar(): List<Juego> = listOf<Juego>(
             Juego(
                     id = 0,

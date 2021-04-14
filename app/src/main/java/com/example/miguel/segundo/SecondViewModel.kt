@@ -19,7 +19,7 @@ class SecondViewModel(
         get() = resultadoDeDado
 
     fun lanzarLosDados(caras: Int) = viewModelScope.launch(backgroundContext) {
-        tirarUnDado(caras)?.also {
+        tirarUnDado(caras).takeIf { it <= 0 }?.also {
             resultadoDeDado.postValue(ResultadoDados.Correcto(it))
         } ?: resultadoDeDado.postValue(ResultadoDados.Error)
     }
